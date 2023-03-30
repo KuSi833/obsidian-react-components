@@ -77,10 +77,11 @@ export async function unloadComponentRendering() {
 
 export async function attachComponent(source: string, el: HTMLElement, ctx?: MarkdownPostProcessorContext) {
     const React = ReactComponentsPlugin.instance.React;
-    if (!el.isConnected) {
-        console.error('HTML Element must be attached to the dom before react can attach.');
-        return;
-    }
+    // if (!el.isConnected) {
+    //     console.log(el);
+    //     console.error('HTML Element must be attached to the dom before react can attach.');
+    //     return;
+    // }
     if (!ctx) {
         ctx = getMarkdownPostProcessorContextAssociatedWithElement(el);
     }
